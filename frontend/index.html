@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cloud Mailbox</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f6fb;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .welcome {
+      background: #fff;
+      padding: 2rem 3rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+      text-align: center;
+    }
+    h1 {
+      color: #2a3b8f;
+    }
+  </style>
+</head>
+<body>
+  <div class="welcome">
+    <h1>Welcome to Cloud Mailbox</h1>
+    <p>Your secure, cloud-hosted mailbox application.</p>
+    <p>Use the login button to access your mailbox.</p>
+    <a href="https://{{user_pool_domain}}.auth.{{region}}.amazoncognito.com/login?client_id={{client_id}}&response_type=code&scope=email+openid+profile&redirect_uri={{redirect_uri}}">
+    <button>Login</button>
+    </a>
+  </div>
